@@ -1,0 +1,181 @@
+*, ::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, .wrapper {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+/* navbar */
+
+nav {
+    background-image: url(https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    width: 450px;
+}
+
+.main-nav-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #3fa34d;
+    opacity: 0.8;
+}
+
+nav p {
+    display: block;
+    color: #ffffff;
+}
+
+nav p:nth-of-type(1){
+    font-size: 1rem;
+}
+
+nav p:nth-of-type(2){
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* main content */
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    width: 599px;
+
+}
+
+.login-form h1 {
+    font-size: 1.7rem;
+    padding-left: 12px;
+    border-left: 6px solid #f7b205;
+    margin-top: 0;
+}
+
+.login-form > * {
+    margin-top: 20px;
+
+}
+
+.login-form label {
+    font-size: .8rem;
+}
+
+.login-form a {
+    text-decoration: none;
+    color: #3fa34d;
+}
+
+
+.heading {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 35px;
+}
+
+.heading a, .heading p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.heading a {
+    text-decoration: underline;
+}
+
+.main-content input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid silver;
+}
+
+input:focus {
+    outline: none;
+}
+
+.main-forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-btn a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 30px;
+    background: #f7b205;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+
+.main-assistance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: .8rem;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 1200px){
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+    }
+
+    nav {
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    body, .wrapper {
+        padding-top: 120px;
+    }
+
+}
+
+@media only screen and (max-width: 991px){
+
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .login-form {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        align-items: stretch;
+    }
+    .login-form {
+        max-width: 310px;
+
+    }
+}
+
